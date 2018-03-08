@@ -13,10 +13,11 @@ spec:
     spec:
       containers:      
       - name: demo-worker
+        imagePullPolicy: Always
         image: cainelli/demo-worker
         env:
           - name: API_URL
-            value: http://demo-master/next
+            value: http://demo-master:8080/next
           - name: TASK_TIME
             value: '2000'
         lifecycle:

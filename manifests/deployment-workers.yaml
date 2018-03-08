@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: demo-worker
+  name: demo-worker
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: demo-worker
+    spec:
+      containers:
+      - name: demo-worker
+        image: cainelli/demo-worker
+        lifecycle:
+          preStop:
+            exec:
+              command: ["/usr/bin/touch", "/stop_worker"]
+        resources:
+          limits:
+            cpu: 200m
+            memory: 100Mi
+          requests:
+            cpu: 100m
+            memory: 50Mi

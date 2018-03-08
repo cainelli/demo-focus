@@ -1,0 +1,23 @@
+{
+  "name": "demo-worker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cainelli/demo-focus.git"
+  },
+  "author": "cainelli/fabio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cainelli/demo-focus/issues"
+  },
+  "homepage": "https://github.com/cainelli/demo-focus#readme",
+  "dependencies": {
+    "request": "2.83.0",
+    "requests": "0.2.2"
+  }
+}

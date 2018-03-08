@@ -11,17 +11,15 @@ spec:
       labels:
         app: demo-worker
     spec:
-      containers:
+      containers:      
       - name: demo-worker
         image: cainelli/demo-worker
+        env:
+          - name: API_URL
+            value: http://demo-master/next
+          - name: TASK_TIME
+            value: '2000'
         lifecycle:
           preStop:
             exec:
               command: ["/usr/bin/touch", "/stop_worker"]
-        resources:
-          limits:
-            cpu: 200m
-            memory: 100Mi
-          requests:
-            cpu: 100m
-            memory: 50Mi

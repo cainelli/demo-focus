@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: demo-master
+  name: demo-master
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: demo-master
+    spec:
+      containers:
+      - name: demo-master
+        image: cainelli/demo-worker
+        command:
+          - npm
+          - run
+          - start-master

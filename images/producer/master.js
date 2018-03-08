@@ -56,7 +56,7 @@ http.createServer((request, response) => {
         pageViews++;
 
         response.setHeader('Content-Type', 'text/html');
-        response.end(homePage);
+        response.end(eval('`' + homePage + '`'));
 
     }
 }).listen(10080);

@@ -1,7 +1,17 @@
 <html>
 <title>Demo</title>
-<form action="/generate" method="post">
-    Number of items: <input name="items" type="text">
-    <input type="submit" value="Generate">
-</form>
+<style>
+    body {
+        font-family: sans-serif;
+    }
+</style>
+<div>
+    <p style="font-size: 32pt;">Queue size: ${queue.length}</p>
+</div>
+<div>
+    <form action="/generate" method="post">
+        Number of items: <input name="items" type="text">
+        <input type="submit" value="Generate">
+    </form>
+</div>
 </html>

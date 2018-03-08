@@ -24,11 +24,11 @@ http.createServer((request, response) => {
         metricsViews++;
 
         let lines = [];
-        lines.push('# TYPE demo_focus.requests_total counter');
-        lines.push(`demo_focus.requests_total{path="/"} ${pageViews}`);
-        lines.push(`demo_focus.requests_total{path="/metrics"} ${metricsViews}`);
-        lines.push('# TYPE demo_focus.queue_size gauge');
-        lines.push(`demo_focus.queue_size ${queue.length}`);
+        lines.push('# TYPE demo_focus_requests_total counter');
+        lines.push(`demo_focus_requests_total{path="/"} ${pageViews}`);
+        lines.push(`demo_focus_requests_total{path="/metrics"} ${metricsViews}`);
+        lines.push('# TYPE demo_focus_queue_size gauge');
+        lines.push(`demo_focus_queue_size ${queue.length}`);
         lines.push('');
         response.end(lines.join("\n"));
 

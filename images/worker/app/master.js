@@ -17,7 +17,7 @@ function generate(items) {
 }
 
 http.createServer((request, response) => {
-    console.log(request.url);
+    console.log(`${new Date().toString()} ${request.url}`);
 
     if (request.url === '/metrics') {
 

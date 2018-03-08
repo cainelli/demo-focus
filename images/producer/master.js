@@ -11,6 +11,9 @@ const homePage = fs.readFileSync('index.html');
 function generate(items) {
     //todo generate items
     console.log(`Generating ${items} items`);
+    for (let i = 0; i < items; i++) {
+        queue.push({hello: 'world'});
+    }
 }
 
 http.createServer((request, response) => {

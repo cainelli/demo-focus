@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start-master": "node master.js",
     "start": "node app.js"
   },
   "repository": {

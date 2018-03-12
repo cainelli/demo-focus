@@ -9,7 +9,7 @@ let queue = [];
 let workers = '';
 let pods = {ready: 0, total: 0};
 let token_file = '/var/run/secrets/kubernetes.io/serviceaccount/token';
-const KUBERNETES_API = 'https://api.sandbox1.gygkube.com:443';
+const KUBERNETES_API = 'https://kubernetes:443';
 const homePage = fs.readFileSync('index.html');
 
 

@@ -5,6 +5,33 @@
         font-family: sans-serif;
         margin: 50px;
     }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .worker-ready {
+        height: 50px;
+        width: 50px;
+        background-color: #A5C5E5;
+        border: 1px solid;
+        margin-right: 5px;
+        margin-top: 5px;
+    }
+    .worker-pending {
+        height: 50px;
+        width: 50px;
+        background-color: #F3CCA2;
+        border: 1px solid;
+        margin-right: 5px;
+        margin-top: 5px;
+    }
+    .master {
+        height: 50px;
+        width: 50px;
+        background-color: #BDD5AC;
+        border: 1px solid;
+        margin-right: 5px
+    }
 </style>
 <div>
     <p style="font-size: 32pt;">Queue size: ${queue.length}</p>
@@ -14,5 +41,13 @@
         Number of items: <input name="items" type="text">
         <input type="submit" value="Generate">
     </form>
+</div>
+
+<h4>Masters: 1/1</h4> 
+<div class="master">P0</div>
+
+<h4>Workers: ${pods.ready}/${pods.total}</h4>
+<div class="container">
+    ${workers}
 </div>
 </html>
